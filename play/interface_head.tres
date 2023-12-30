@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://4hw6oc5ispy6"]
+
+[ext_resource type="FontFile" uid="uid://bjk2weodnsi7u" path="res://asset/font/VT323-Regular.ttf" id="1_1e3ne"]
+
+[resource]
+font = ExtResource("1_1e3ne")
+font_size = 25
+font_color = Color(0.811765, 0.811765, 0.811765, 1)

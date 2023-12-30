@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://ytfugnne8bo8"]
+
+[ext_resource type="FontFile" uid="uid://c0q8rwmf71f8u" path="res://asset/font/PixelifySans-VariableFont_wght.ttf" id="1_ngm18"]
+[ext_resource type="Script" path="res://main/gameove.gd" id="1_rnuou"]
+[ext_resource type="PackedScene" uid="uid://o6grniilc162" path="res://main/btn.tscn" id="3_emi0b"]
+[ext_resource type="LabelSettings" uid="uid://decvna8dd4jhj" path="res://main/main_menu_title.tres" id="3_fqquc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qth6b"]
+font = ExtResource("1_ngm18")
+font_size = 46
+font_color = Color(1, 0.839216, 1, 1)
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0.945098, 0.647059, 0.992157, 1)
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="Animation" id="Animation_uku0g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 37)]
+}
+
+[sub_resource type="Animation" id="Animation_caiv8"]
+resource_name = "jump_Txt"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 72), Vector2(0, 55), Vector2(0, 72)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uu8ig"]
+_data = {
+"RESET": SubResource("Animation_uku0g"),
+"jump_Txt": SubResource("Animation_caiv8")
+}
+
+[node name="gameOverUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rnuou")
+
+[node name="Header" type="Label" parent="."]
+layout_mode = 0
+offset_top = 37.0
+offset_right = 960.0
+offset_bottom = 96.0002
+grow_horizontal = 2
+pivot_offset = Vector2(480, 35)
+text = "Game OVER"
+label_settings = SubResource("LabelSettings_qth6b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Header"]
+autoplay = "jump_Txt"
+libraries = {
+"": SubResource("AnimationLibrary_uu8ig")
+}
+
+[node name="PlayBtn" parent="." instance=ExtResource("3_emi0b")]
+position = Vector2(479, 306)
+character = "Play again"
+soundfile = "res://asset/sound/jump (2).wav"
+
+[node name="MainBtn" parent="." instance=ExtResource("3_emi0b")]
+position = Vector2(479, 413)
+character = "Main menu"
+soundfile = "res://asset/sound/jump (2).wav"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -95.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU lose your soulmate 
+and make them live sad everday"
+label_settings = ExtResource("3_fqquc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="clickbutton" from="PlayBtn" to="." method="_on_play_btn_clickbutton"]
+[connection signal="clickbutton" from="MainBtn" to="." method="_on_main_btn_clickbutton"]

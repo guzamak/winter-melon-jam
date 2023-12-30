@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn84245pgk50w"]
+
+[ext_resource type="Script" path="res://main/main.gd" id="1_o4j7u"]
+[ext_resource type="PackedScene" uid="uid://bxilnp4n533td" path="res://play/bg.tscn" id="1_y3eig"]
+[ext_resource type="PackedScene" uid="uid://ytfugnne8bo8" path="res://main/gameove.tscn" id="2_0fro7"]
+[ext_resource type="PackedScene" uid="uid://d3ubnjlt2omx6" path="res://main/main_menu.tscn" id="2_bwbaf"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_o4j7u")
+
+[node name="Bg" parent="." instance=ExtResource("1_y3eig")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="gameWinUI" parent="CanvasLayer" instance=ExtResource("2_0fro7")]
+headertxt = "Your Win !!!"
+labeltxt = "You and your two soulmate in a relationship in "
+metadata/_edit_use_anchors_ = true
+
+[node name="gameOverUI" parent="CanvasLayer" instance=ExtResource("2_0fro7")]
+visible = false
+headertxt = "Game OVER"
+labeltxt = "YOU lose your soulmate and
+make them live sad everday
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Main menu" parent="CanvasLayer" instance=ExtResource("2_bwbaf")]
+visible = false
+
+[node name="win_over_sound" type="AudioStreamPlayer2D" parent="."]
+volume_db = -3.0

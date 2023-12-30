@@ -1,0 +1,216 @@
+[gd_scene load_steps=14 format=3 uid="uid://k7pb4bp7x7sy"]
+
+[ext_resource type="FontFile" uid="uid://c0q8rwmf71f8u" path="res://asset/font/PixelifySans-VariableFont_wght.ttf" id="1_3vdo8"]
+[ext_resource type="Script" path="res://play/interface.gd" id="1_18evu"]
+[ext_resource type="Texture2D" uid="uid://cbnrx1101vywj" path="res://asset/menu.png" id="1_vwvvy"]
+[ext_resource type="FontFile" uid="uid://bjk2weodnsi7u" path="res://asset/font/VT323-Regular.ttf" id="2_bl2a2"]
+[ext_resource type="LabelSettings" uid="uid://4hw6oc5ispy6" path="res://play/interface_head.tres" id="3_7ndjn"]
+[ext_resource type="PackedScene" uid="uid://o6grniilc162" path="res://main/btn.tscn" id="3_wbaww"]
+[ext_resource type="Texture2D" uid="uid://ch1uiy2j8c7sb" path="res://asset/obj/obj3.png" id="6_p82m7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_76moe"]
+font = ExtResource("1_3vdo8")
+font_size = 25
+font_color = Color(0.980392, 0.847059, 1, 1)
+shadow_color = Color(0.945098, 0.647059, 0.992157, 1)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xm3sp"]
+font = ExtResource("1_3vdo8")
+font_size = 36
+font_color = Color(0.980392, 0.847059, 1, 1)
+shadow_color = Color(0.945098, 0.647059, 0.992157, 1)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tnd87"]
+font = ExtResource("2_bl2a2")
+font_size = 50
+font_color = Color(0.811765, 0.811765, 0.811765, 1)
+
+[sub_resource type="Animation" id="Animation_op4nb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Obj:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(469, 485.08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Obj:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.623529)]
+}
+
+[sub_resource type="Animation" id="Animation_i7yx4"]
+resource_name = "give_to"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Obj:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(469, 485.08), Vector2(469, 428.685)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Obj:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.623529), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yhn2l"]
+_data = {
+"RESET": SubResource("Animation_op4nb"),
+"give_to": SubResource("Animation_i7yx4")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_18evu")
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -157.0
+offset_top = 25.0
+offset_right = 151.0
+offset_bottom = 167.0
+grow_horizontal = 2
+scale = Vector2(0.998301, 1)
+text = "0"
+label_settings = SubResource("LabelSettings_76moe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -155.0
+offset_top = 12.0
+offset_right = 153.0
+offset_bottom = 154.0
+grow_horizontal = 2
+text = "LOVE SCORE
+ "
+label_settings = SubResource("LabelSettings_xm3sp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.898039)
+position = Vector2(477, 486)
+scale = Vector2(3, 3)
+texture = ExtResource("1_vwvvy")
+
+[node name="Control" type="Control" parent="Menu"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.3333
+offset_top = -57.0
+offset_right = 32.3333
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="KaraneLike" type="Label" parent="Menu/Control"]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 54.0
+offset_right = 62.0
+offset_bottom = 110.0
+text = "Karane III"
+label_settings = ExtResource("3_7ndjn")
+
+[node name="HakariLike" type="Label" parent="Menu/Control"]
+layout_mode = 2
+offset_right = 60.0
+offset_bottom = 56.0
+text = "Hakari O"
+label_settings = ExtResource("3_7ndjn")
+
+[node name="TimeUseLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 264.0
+offset_top = 439.0
+offset_right = 419.0
+offset_bottom = 467.0
+text = "TIME USE"
+label_settings = ExtResource("3_7ndjn")
+
+[node name="Time" type="Label" parent="."]
+layout_mode = 2
+offset_left = 262.0
+offset_top = 476.0
+offset_right = 501.0
+offset_bottom = 529.0
+text = "00"
+label_settings = SubResource("LabelSettings_tnd87")
+
+[node name="HakariBtn" parent="." instance=ExtResource("3_wbaww")]
+self_modulate = Color(1, 1, 1, 0.862745)
+position = Vector2(347, 367)
+character = "Hakari"
+
+[node name="KaraneBtn" parent="." instance=ExtResource("3_wbaww")]
+self_modulate = Color(1, 1, 1, 0.862745)
+position = Vector2(603, 368)
+character = "Karane"
+
+[node name="Obj" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.623529)
+position = Vector2(469, 485.08)
+rotation = -0.00113443
+scale = Vector2(3, 3)
+texture = ExtResource("6_p82m7")
+
+[node name="obj_anim" type="AnimationPlayer" parent="Obj"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_yhn2l")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="clickbutton" from="HakariBtn" to="." method="_on_hakari_btn_clickbutton"]
+[connection signal="clickbutton" from="KaraneBtn" to="." method="_on_karane_btn_clickbutton"]
+[connection signal="animation_finished" from="Obj/obj_anim" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_started" from="Obj/obj_anim" to="." method="_on_animation_player_animation_started"]

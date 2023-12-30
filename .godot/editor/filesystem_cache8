@@ -1,0 +1,76 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1703921053
+export_presets.cfg::TextFile::-1::1703888951::0::1::::<><>::
+icon.svg::CompressedTexture2D::4435197086187697064::1703322697::1701022710::1::::<><>::
+::res://asset/::1703888867
+bg.png::CompressedTexture2D::8850914963323747979::1703783267::1703783271::1::::<><>::
+cloud.png::CompressedTexture2D::7856795723666501610::1703783300::1703783300::1::::<><>::
+menu.png::CompressedTexture2D::4870941790907356861::1703785161::1703785165::1::::<><>::
+::res://asset/btn/::1703888866
+btn-use.png::CompressedTexture2D::7473134334568676962::1703784660::1703784660::1::::<><>::
+btn.png::CompressedTexture2D::5315677118432057638::1703784660::1703784660::1::::<><>::
+::res://asset/font/::1703888866
+PixelifySans-VariableFont_wght.ttf::FontFile::6562627695981969530::1703781904::1703781904::1::::<><>::
+VT323-Regular.ttf::FontFile::3040442932121651380::1703781914::1703781914::1::::<><>::
+::res://asset/hakari/::1703888866
+hakari2.png::CompressedTexture2D::3566619757285926984::1703784276::1703784276::1::::<><>::
+hakari3.png::CompressedTexture2D::2802897842257218903::1703784276::1703784276::1::::<><>::
+hakari.png::CompressedTexture2D::5207914327453698058::1703784276::1703784276::1::::<><>::
+hakarishy.png::CompressedTexture2D::1003192063654305343::1703832563::1703832563::1::::<><>::
+hakari_shy1.png::CompressedTexture2D::8672336249808674148::1703885887::1703885888::1::::<><>::
+hakari_shy2.png::CompressedTexture2D::5164343425231388183::1703885887::1703885888::1::::<><>::
+hakari_shy3.png::CompressedTexture2D::7109959338326974548::1703885887::1703885888::1::::<><>::
+::res://asset/karane/::1703888867
+karane.png::CompressedTexture2D::1455258511017813295::1703784498::1703784498::1::::<><>::
+karane_2.png::CompressedTexture2D::467092562218191521::1703784498::1703784498::1::::<><>::
+karane_3.png::CompressedTexture2D::4859058550040246594::1703784498::1703784498::1::::<><>::
+karane_3shy.png::CompressedTexture2D::2575051223696824287::1703832567::1703832568::1::::<><>::
+karane_shy1.png::CompressedTexture2D::9109426350093952872::1703885897::1703885938::1::::<><>::
+karane_shy2.png::CompressedTexture2D::8901281071650204284::1703885897::1703885938::1::::<><>::
+karane_shy3.png::CompressedTexture2D::8107525728587652957::1703885897::1703885938::1::::<><>::
+::res://asset/obj/::1703888867
+obj1.png::CompressedTexture2D::1895117612690594758::1703878367::1703878367::1::::<><>::
+obj2.png::CompressedTexture2D::4901200062366253606::1703839732::1703839732::1::::<><>::
+obj3.png::CompressedTexture2D::5319067023387808229::1703826150::1703826150::1::::<><>::
+::res://asset/sound/::1703888867
+blipSelect (1).wav::AudioStreamWAV::6726082614896261028::1703873311::1703873311::1::::<><>::
+explosion (2).wav::AudioStreamWAV::2705579176279669990::1703884047::1703884047::1::::<><>::
+jump (1).wav::AudioStreamWAV::3841204025125027503::1703873340::1703873341::1::::<><>::
+jump (2).wav::AudioStreamWAV::4639610234713642942::1703873323::1703873323::1::::<><>::
+jump.wav::AudioStreamWAV::1462592780847353766::1703873206::1703873208::1::::<><>::
+laserShoot.wav::AudioStreamWAV::6065406799895022503::1703886798::1703886798::1::::<><>::
+pickupCoin.wav::AudioStreamWAV::7628346267303760555::1703873274::1703873274::1::::<><>::
+powerUp (3).wav::AudioStreamWAV::244100942888766153::1703873218::1703873218::1::::<><>::
+powerUp (4).wav::AudioStreamWAV::6970768215355666587::1703873247::1703873247::1::::<><>::
+synth (1).wav::AudioStreamWAV::1623008960434912961::1703884047::1703884047::1::::<><>::
+synth (2).wav::AudioStreamWAV::197940048270386085::1703884046::1703884047::1::::<><>::
+synth.wav::AudioStreamWAV::1159554630190742606::1703884047::1703884047::1::::<><>::
+track winter melon.wav::AudioStreamWAV::7871430014429995464::1703883972::1703883973::1::::<><>::
+::res://main/::1703919724
+btn.tscn::PackedScene::1047034877301568481::1703919723::0::1::::<><>::uid://chy7op5i51qje::::res://asset/btn/btn.png<>res://play/Btn.gd<>uid://c0q8rwmf71f8u::::res://asset/font/PixelifySans-VariableFont_wght.ttf
+fade.gd::GDScript::-1::1703852082::0::1::::<>CanvasLayer<>::
+fade.tscn::PackedScene::9209661018597543386::1703854412::0::1::::<><>::res://main/fade.gd
+gameove.gd::GDScript::-1::1703858770::0::1::::<>Control<>::
+gameove.tscn::PackedScene::1724095061301706025::1703919724::0::1::::<><>::uid://c0q8rwmf71f8u::::res://asset/font/PixelifySans-VariableFont_wght.ttf<>res://main/gameove.gd<>uid://o6grniilc162::::res://main/btn.tscn<>uid://decvna8dd4jhj::::res://main/main_menu_title.tres
+main.gd::GDScript::-1::1703916234::0::1::::<>Node2D<>::
+main.tscn::PackedScene::3368810696308418928::1703919723::0::1::::<><>::res://main/main.gd<>uid://bxilnp4n533td::::res://play/bg.tscn<>uid://ytfugnne8bo8::::res://main/gameove.tscn<>uid://d3ubnjlt2omx6::::res://main/main_menu.tscn
+main_menu.gd::GDScript::-1::1703857829::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::9165921650941854493::1703919724::0::1::::<><>::res://main/main_menu.gd<>uid://c0q8rwmf71f8u::::res://asset/font/PixelifySans-VariableFont_wght.ttf<>uid://decvna8dd4jhj::::res://main/main_menu_title.tres<>uid://o6grniilc162::::res://main/btn.tscn
+main_menu_title.tres::LabelSettings::7445444504428423123::1703856199::0::1::::<><>::uid://bjk2weodnsi7u
+SenceManager.gd::GDScript::-1::1703858326::0::1::::<>Node2D<>::
+sence_manager.tscn::PackedScene::2995257752185333650::1703919723::0::1::::<><>::uid://bn84245pgk50w::::res://main/main.tscn<>uid://d4hh1h1g8xhqw::::res://main/fade.tscn<>res://main/SenceManager.gd<>uid://dke8kjp5gmo3y::::res://asset/sound/track winter melon.wav
+::res://play/::1703919724
+bg.tscn::PackedScene::4017971044922983193::1703919724::0::1::::<><>::uid://dydpjnoepgjrf::::res://asset/bg.png<>res://play/ParallaxLayer.gd<>uid://dj65jo82grwec::::res://asset/cloud.png
+Btn.gd::GDScript::-1::1703876733::0::1::::<>Sprite2D<>::
+interface.gd::GDScript::-1::1703919040::0::1::::<>Control<>::
+interface.tscn::PackedScene::768862590642832852::1703919723::0::1::::<><>::uid://c0q8rwmf71f8u::::res://asset/font/PixelifySans-VariableFont_wght.ttf<>res://play/interface.gd<>uid://cbnrx1101vywj::::res://asset/menu.png<>uid://bjk2weodnsi7u::::res://asset/font/VT323-Regular.ttf<>uid://4hw6oc5ispy6::::res://play/interface_head.tres<>uid://o6grniilc162::::res://main/btn.tscn<>uid://ch1uiy2j8c7sb::::res://asset/obj/obj3.png
+interface_head.tres::LabelSettings::2051318983024261467::1703854077::0::1::::<><>::uid://bjk2weodnsi7u
+ParallaxLayer.gd::GDScript::-1::1703784133::0::1::::<>ParallaxLayer<>::
+play.gd::GDScript::-1::1703918267::0::1::::<>Node2D<>::
+play.tscn::PackedScene::3028017950273352504::1703919724::0::1::::<><>::uid://bxilnp4n533td::::res://play/bg.tscn<>res://play/play.gd<>uid://cgg0t83gknt8u::::res://asset/hakari/hakari.png<>uid://bq2xyaq6i71lk::::res://asset/hakari/hakari2.png<>uid://bf60k2s3xa2dv::::res://asset/hakari/hakari3.png<>uid://oj7orj2s3nkx::::res://asset/hakari/hakarishy.png<>uid://uy65oxpu4til::::res://asset/karane/karane.png<>uid://gwi7f4w3ngkn::::res://asset/karane/karane_2.png<>uid://cbh08p76ui7vy::::res://asset/karane/karane_3.png<>uid://dvs7d1kmfidyy::::res://asset/hakari/hakari_shy1.png<>uid://k7pb4bp7x7sy::::res://play/interface.tscn<>uid://c8kd8yg4p1sbk::::res://asset/hakari/hakari_shy3.png<>uid://bcxmynmbw82sh::::res://asset/karane/karane_3shy.png<>uid://d21w6k1hkmg4w::::res://asset/karane/karane_shy1.png<>uid://dnrl08peb4rr6::::res://asset/karane/karane_shy3.png
+::res://script/::1703888883
+GameManager.gd::GDScript::-1::1703886263::0::1::::<>Node<>::
+love_gif_obj.gd::GDScript::-1::1703880768::0::1::::<>Node<>::
+::res://track winter melon/::1703888887
+::res://track winter melon/Audio/::1703862023
+::res://track winter melon/Audio Export/::1703883864

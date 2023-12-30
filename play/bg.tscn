@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxilnp4n533td"]
+
+[ext_resource type="Texture2D" uid="uid://dydpjnoepgjrf" path="res://asset/bg.png" id="1_4fldn"]
+[ext_resource type="Script" path="res://play/ParallaxLayer.gd" id="3_lnj87"]
+[ext_resource type="Texture2D" uid="uid://dj65jo82grwec" path="res://asset/cloud.png" id="3_wbtvd"]
+
+[node name="Bg" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(1000, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1000, 0)
+script = ExtResource("3_lnj87")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(479, 273)
+scale = Vector2(3, 3)
+texture = ExtResource("3_wbtvd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -128
+
+[node name="Bg" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(480, 270)
+scale = Vector2(3, 3)
+texture = ExtResource("1_4fldn")

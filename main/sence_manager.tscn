@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://biw6ps7fy1ilm"]
+
+[ext_resource type="PackedScene" uid="uid://bn84245pgk50w" path="res://main/main.tscn" id="1_5tfh4"]
+[ext_resource type="PackedScene" uid="uid://d4hh1h1g8xhqw" path="res://main/fade.tscn" id="1_kbltp"]
+[ext_resource type="Script" path="res://main/SenceManager.gd" id="1_n7ytg"]
+[ext_resource type="AudioStream" uid="uid://dke8kjp5gmo3y" path="res://asset/sound/track winter melon.wav" id="4_1kser"]
+
+[node name="SenceManager" type="Node2D"]
+script = ExtResource("1_n7ytg")
+
+[node name="CurrentSence" type="Node2D" parent="."]
+
+[node name="Main" parent="CurrentSence" instance=ExtResource("1_5tfh4")]
+
+[node name="Fade" parent="." instance=ExtResource("1_kbltp")]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1kser")
+volume_db = -15.0
+autoplay = true
+
+[connection signal="trasitioned" from="Fade" to="." method="_on_fade_trasitioned"]

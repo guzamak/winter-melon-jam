@@ -1,0 +1,9 @@
+res://play/interface.tscn
+res://main/sence_manager.tscn
+res://main/btn.tscn
+res://main/main.tscn
+res://main/main_menu.tscn
+res://main/gameove.tscn
+res://play/bg.tscn
+res://play/play.tscn
+res://play/interface.gd
