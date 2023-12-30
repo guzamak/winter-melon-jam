@@ -29,4 +29,3 @@ metadata/_edit_use_anchors_ = true
 visible = false
 
 [node name="win_over_sound" type="AudioStreamPlayer2D" parent="."]
-volume_db = -3.0
