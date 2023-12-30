@@ -1,0 +1,11 @@
+res://main/btn.tscn::0c149f1f1e50128790f98576c98c79fd::1703934903::res://.godot/exported/133200997/export-43f82d76c9e9fa35b002311c86147b25-btn.scn
+res://main/fade.tscn::05f3cd8c0be74ccc217803394dbbd3e3::1703854412::res://.godot/exported/133200997/export-a12ca96d24d01032a28d560eef228340-fade.scn
+res://main/gameove.tscn::c2365a399416c8ed8bf0a0e1112a1189::1703934903::res://.godot/exported/133200997/export-894a26ebc6e6b89098bbe65252574284-gameove.scn
+res://main/main.tscn::02e77e9bd9bf655185a206c2be49c982::1703934903::res://.godot/exported/133200997/export-435f623093a3e2498450e744191b98a6-main.scn
+res://main/main_menu.tscn::2b072e36a314c507bf998e897954fa1d::1703934903::res://.godot/exported/133200997/export-2c692927ea68159052c9da1cdd50022e-main_menu.scn
+res://main/main_menu_title.tres::92ede13da0d2d07ef7323297702bb659::1703856199::res://.godot/exported/133200997/export-3cd4fc3f51e1775889a03e173af619f9-main_menu_title.res
+res://main/sence_manager.tscn::7a9c83f20edd0f1e44b79c1f5dc1d0c0::1703934903::res://.godot/exported/133200997/export-44b7b29da2de6f282b2c25b240b406e9-sence_manager.scn
+res://play/bg.tscn::c2b6bd03279620d127c5e75fc7f954ce::1703934903::res://.godot/exported/133200997/export-e90acfa59ee1684361078939eebfc5a0-bg.scn
+res://play/interface.tscn::4ed4343ca5de59843e1afdbb334d9434::1703934932::res://.godot/exported/133200997/export-5609ac4d092e9930c52974df2c5cd256-interface.scn
+res://play/interface_head.tres::c4b485d509f1f42ffead54337dae6b72::1703854077::res://.godot/exported/133200997/export-437d822aad0334b34215c0ba9d898c48-interface_head.res
+res://play/play.tscn::dee1183cbe7456e0bfdd1babb9f96cbd::1703934903::res://.godot/exported/133200997/export-6c0dbdb3e6fb9965d612425a59afcad6-play.scn

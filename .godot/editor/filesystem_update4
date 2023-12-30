@@ -7,3 +7,6 @@ res://main/gameove.tscn
 res://play/bg.tscn
 res://play/play.tscn
 res://play/interface.gd
+res://script/GameManager.gd
+res://play/play.gd
+res://play/Btn.gd

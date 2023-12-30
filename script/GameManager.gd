@@ -10,6 +10,7 @@ var socre = 0
 var gameSence = preload("res://play/play.tscn")
 var gameState = "main"
 var time = "00s"
+var function_called = false
 
 func plusscore(plus):
 	socre += plus 
@@ -37,7 +38,7 @@ func change_sence_to_loss():
 	on_sence_change.emit()
 
 func change_sence_to_win():
-	gameState= "win"
+	gameState = "win"
 	gameSence = preload("res://main/main.tscn")
 	on_sence_change.emit()
 

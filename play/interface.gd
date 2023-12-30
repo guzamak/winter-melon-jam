@@ -36,6 +36,8 @@ func _process(delta):
 	#win
 	if GameManager.socre >= 30 :
 		GameManager.on_win.emit()
+		hakari_btn.hide()
+		karane_btn.hide()
 	if GameManager.socre <= -10:
 		GameManager.change_sence_to_loss()
 
@@ -81,11 +83,13 @@ func _on_animation_player_animation_started(anim_name):
 
 
 func _on_animation_player_animation_finished(anim_name):
-	if anim_name == "give_to":
+	if anim_name == "give_to" and GameManager.function_called == false:
 		hakari_btn.show()
 		karane_btn.show()
 		hakari_btn.unhover() #fix bug
 		karane_btn.unhover()
+		hakari_btn._on_button_button_up()
+		karane_btn._on_button_button_up()
 		LoveGifObj.random_obj()
 	obj_anim.play("RESET")
 

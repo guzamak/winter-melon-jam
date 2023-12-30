@@ -6,10 +6,11 @@ extends Node2D
 @onready var timer = $Timer
 
 var shy_sound = preload("res://asset/sound/powerUp (3).wav")
-var function_called = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	audio_stream_player.stream = shy_sound
+	GameManager.function_called = false
 	GameManager.on_karane_shy.connect(on_karane_shy)
 	GameManager.on_hakari_shy.connect(on_hakari_shy)
 	GameManager.on_win.connect(on_win)
@@ -35,11 +36,11 @@ func _on_hakari_anim_animation_finished(anim_name):
 	hakari_anim.play("hakari_blink")
 
 func on_win():
-	if !function_called:
+	if !GameManager.function_called:
 		karane_anim.play("shy_shy")
 		hakari_anim.play("shy_shy")
 		timer.start()
-		function_called = true
+		GameManager.function_called = true
 
 
 func _on_timer_timeout():
